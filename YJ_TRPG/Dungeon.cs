@@ -20,6 +20,10 @@ public static class Dungeon
             if (input == "0")
             {
                 Console.Clear();
+                Console.WriteLine("게임이 저장되었습니다.");
+                SaveManager.SaveGame();
+                Thread.Sleep(1000);
+                Console.Clear();
                 break;
             }
             if (int.TryParse(input, out inputNumber))

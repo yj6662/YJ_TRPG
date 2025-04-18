@@ -41,13 +41,15 @@ public static class MainScene
                         Dungeon.Show();
                         break;
                     default:
-                        Console.WriteLine("1~3 사이의 숫자를 입력해주세요.");
+                        Console.WriteLine("1~5 사이의 숫자를 입력해주세요.");
                         break;
                 }
             }
             else
             {
                 Console.WriteLine("잘못된 입력입니다. 숫자를 입력해주세요.");
+                Console.ReadKey();
+                Console.Clear();
             }
 
             Console.WriteLine();

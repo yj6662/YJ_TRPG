@@ -5,11 +5,11 @@ public static class Player
     public static string Name = "Chad";
     public static string Job = "전사";
     public static int Level = 1;
-    public static int Hp = 20;
+    public static int Hp = 100;
     public static int MaxHp = 100;
     public static float Atk = 10;
     public static float Def = 5;
-    public static int Gold = 3000;
+    public static int Gold = 1500;
     public static int level = 1;
     public static int Exp = 0;
 
@@ -48,6 +48,10 @@ public static class Player
             string input = Console.ReadLine();
             if (input == "0")
             {
+                Console.Clear();
+                Console.WriteLine("게임이 저장되었습니다.");
+                SaveManager.SaveGame();
+                Thread.Sleep(1000);
                 Console.Clear();
                 break;
             }

@@ -16,7 +16,6 @@ public static class Status
             Console.WriteLine($"방어력 : {Player.totalDef()}");
             Console.WriteLine($"체 력 : {Player.Hp} / {Player.MaxHp}");
             Console.WriteLine($"Gold : {Player.Gold} G");
-            Console.WriteLine($"레벨 : {Player.level}\n");
 
             Console.WriteLine("0. 나가기");
             Console.WriteLine("\n원하시는 행동을 입력해주세요.");
@@ -24,7 +23,14 @@ public static class Status
 
             string input = Console.ReadLine();
             if (input == "0")
+            {
+                Console.Clear();
+                Console.WriteLine("게임이 저장되었습니다.");
+                SaveManager.SaveGame();
+                Thread.Sleep(1000);
+                Console.Clear();
                 break;
+            }
             else
                 Console.WriteLine("\n잘못된 입력입니다. 다시 시도해주세요.");
         }

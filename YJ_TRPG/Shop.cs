@@ -23,6 +23,10 @@ public static class Shop
             if (input == "0")
             {
                 Console.Clear();
+                Console.WriteLine("게임이 저장되었습니다.");
+                SaveManager.SaveGame();
+                Thread.Sleep(1000);
+                Console.Clear();
                 break;
             }
             else if (input == "1") Buy();
